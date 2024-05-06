@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t; cin>>t;
+    while(t--){
+        long long n;
+        cin>>n;
+        vector<long long> a(n);
+        for(long long i=0;i<n;i++){
+            cin>>a[i];
+        }
+        long long max_res=0;
+        for(long long i=0;n-i>max_res;i++){
+            for(long long j=n-1;j>i;j--){
+                if(a[j]>=a[i]){
+                    if(j-i>max_res){
+                            max_res=j-i;
+                    }-
+                    break;
+                }
+            }
+        }
+        cout<<max_res<<endl;
+    }
+
+
+    }
