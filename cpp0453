@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t; cin>>t;
+    while(t--){
+        int n; cin>>n;
+        int k; cin>>k;
+        multiset<int>a;
+        for(int i=0;i<n;i++){
+            int x; cin>>x;
+            a.insert(x);
+        }
+        auto it=a.begin();
+        while(k>1){
+            it++;
+            k--;
+        }
+        cout<<*it<<endl;
+    }
+
+    }
